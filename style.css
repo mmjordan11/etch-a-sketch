@@ -1,0 +1,71 @@
+:root {
+  --minDimension: min(80vw, 80vh);
+  --gridSize: calc(.9*var(--minDimension));
+  --buttonSize: calc(.1*var(--minDimension));
+}
+
+h1 {
+  font-family: 'Aladin', cursive;
+  color: gold;
+  margin: auto;
+  padding: 12px;
+}
+
+button {
+  background-color: white;
+  border-radius: 50%;
+  width: var(--buttonSize);
+  height: var(--buttonSize);
+  margin: 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#toy-body {
+  display: flex;
+  flex-direction: column;
+  width: var(--minDimension);
+  background-color: red;
+  border-radius: 50px;
+  margin: auto;
+
+}
+
+#grid {
+  width: var(--gridSize);
+  height: var(--gridSize);
+  display: grid;
+  gap: 1px;
+  background-color: gray;
+  margin: auto;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell {
+  background-color: rgb(255,255,255);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate(-1px,0);
+  }
+  20%, 80% {
+    transform: translate(2px,0);
+  }
+  30%, 70% {
+    transform: translate(-4px,0);
+  }
+  40%, 50% {
+    transform: translate(4px,0);
+  }
+}
+
+.apply-shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
